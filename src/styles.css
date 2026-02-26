@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000000 100%);
+    position: relative;
+}

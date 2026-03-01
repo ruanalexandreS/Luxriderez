@@ -13,15 +13,13 @@ import { ProductService } from '../../../core/services/product.service';
 export class ProductDetailComponent implements OnInit {
   product: Product | null = null;
   currentIndex = 0;
-  activeTab: 'specs' | 'trust' | 'details' = 'specs';
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
     this.productService.selectedProduct$.subscribe(p => {
       this.product = p;
       this.currentIndex = 0;
-      this.activeTab = 'specs';
     });
   }
 
@@ -29,19 +27,27 @@ export class ProductDetailComponent implements OnInit {
     this.productService.closeDetail();
   }
 
+  getWhatsAppLink(): string {
+    if (!this.product) return '';
+
+    const phoneNumber = '573105891725';
+    const message = `Hola! Quiero comprar la ${this.product.name} en Luxriderez.`;
+    const encodedMessage = encodeURIComponent(message);
+
+    return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  }
+
   nextMedia() {
     if (this.product) {
-      const hasVideo = !!this.product.video;
-      const total = this.product.images.length + (hasVideo ? 1 : 0);
-      this.currentIndex = (this.currentIndex + 1) % total;
+      const totalMedia = (this.product.video ? 1 : 0) + this.product.images.length;
+      this.currentIndex = (this.currentIndex + 1) % totalMedia;
     }
   }
 
   prevMedia() {
     if (this.product) {
-      const hasVideo = !!this.product.video;
-      const total = this.product.images.length + (hasVideo ? 1 : 0);
-      this.currentIndex = (this.currentIndex - 1 + total) % total;
+      const totalMedia = (this.product.video ? 1 : 0) + this.product.images.length;
+      this.currentIndex = (this.currentIndex - 1 + totalMedia) % totalMedia;
     }
   }
 }

@@ -1,28 +1,50 @@
 <div
-    class="group bg-zinc-900 border border-zinc-800 rounded-3xl p-6 transition-all hover:border-lux-neon hover:shadow-neon-strong">
+    class="group bg-zinc-900 border border-zinc-800 rounded-3xl p-6 transition-all hover:border-lux-neon hover:shadow-neon-strong h-full flex flex-col">
     <div class="relative mb-6 overflow-hidden rounded-2xl h-64">
         <img [src]="product.images[0]" [alt]="product.name"
             class="w-full h-full object-cover transition-transform group-hover:scale-110">
 
-        <div *ngIf="product.isCustom"
-            class="absolute top-3 right-3 bg-lux-neon text-[10px] font-bold px-3 py-1 rounded-full uppercase">
-            Personalizado
+        <div *ngIf="product.originalPrice"
+            class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase shadow-lg">
+            ¡Oferta!
         </div>
     </div>
 
     <h3 class="text-2xl font-bold mb-1 text-white">{{product.name}}</h3>
     <p class="text-lux-neon text-sm font-bold mb-4 uppercase tracking-tighter">{{product.subtitle}}</p>
 
-    <p class="text-zinc-500 text-xs leading-relaxed mb-6 italic line-clamp-2">
+    <div *ngIf="product.originalPrice" class="mb-4">
+        <span
+            class="bg-lux-neon/10 text-lux-neon border border-lux-neon/30 text-[10px] font-black px-3 py-1 rounded-md uppercase tracking-widest">
+            Ahorra ${{ (product.originalPrice - product.price) | number:'1.0-0' }}
+        </span>
+    </div>
+
+    <p class="text-zinc-500 text-xs leading-relaxed mb-6 italic">
         {{product.description}}
     </p>
 
-    <p class="text-3xl font-black mb-6 text-lux-gold">
-        ${{product.price | number:'1.0-0'}} <span class="text-sm font-normal text-gray-500">COP</span>
-    </p>
+    <div class="mt-auto">
+        <div class="flex flex-col gap-1 mb-6">
+            <p *ngIf="product.originalPrice" class="text-xs text-zinc-500 uppercase font-bold tracking-wider">
+                Antes: <span class="line-through decoration-red-600/50">${{product.originalPrice |
+                    number:'1.0-0'}}</span>
+            </p>
 
-    <button (click)="onViewDetails()"
-        class="w-full py-3 border border-white/10 rounded-xl font-bold hover:bg-lux-neon hover:text-white transition-all uppercase text-xs tracking-widest">
-        Ver Detalles
-    </button>
+            <div class="flex items-center gap-3">
+                <p class="text-3xl font-black text-lux-gold italic">
+                    Hoy: ${{product.price | number:'1.0-0'}}
+                </p>
+
+                <p *ngIf="product.originalPrice" class="text-[10px] font-black text-lux-neon uppercase animate-pulse">
+                    ¡Ahora!!
+                </p>
+            </div>
+        </div>
+
+        <button (click)="onViewDetails()"
+            class="w-full py-3 border border-white/10 rounded-xl font-bold hover:bg-lux-neon hover:text-white transition-all uppercase text-xs tracking-widest">
+            Ver Detalles
+        </button>
+    </div>
 </div>

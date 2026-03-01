@@ -1,0 +1,26 @@
+<section class="py-24 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-widest text-zinc-500">
+        Explora Nuestras Colecciones
+    </h2>
+
+    <div class="flex justify-center gap-4 mb-16 overflow-x-auto pb-4">
+        <button (click)="setCategory('todos')" [class.bg-lux-neon]="selectedCategory === 'todos'"
+            class="px-8 py-2 rounded-full border border-zinc-800 text-xs font-bold uppercase tracking-widest transition-all hover:border-lux-neon">
+            Todos
+        </button>
+        <button (click)="setCategory('mochilas')" [class.bg-lux-neon]="selectedCategory === 'mochilas'"
+            class="px-8 py-2 rounded-full border border-zinc-800 text-xs font-bold uppercase tracking-widest transition-all hover:border-lux-neon">
+            Mochilas
+        </button>
+        <button (click)="setCategory('gorras')" [class.bg-lux-neon]="selectedCategory === 'gorras'"
+            class="px-8 py-2 rounded-full border border-zinc-800 text-xs font-bold uppercase tracking-widest transition-all hover:border-lux-neon">
+            Gorras
+        </button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <app-product-card *ngFor="let p of filteredProducts; trackBy: trackByProductId" [product]="p"
+            class="animate-fade-in-up">
+        </app-product-card>
+    </div>
+</section>

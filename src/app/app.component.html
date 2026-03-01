@@ -4,140 +4,29 @@
     <video autoplay muted loop class="absolute w-full h-full object-cover z-0 opacity-40">
       <source src="assets/hero-ride.mp4" type="video/mp4">
     </video>
-
     <div class="relative z-10 text-center px-4 max-w-lg mx-auto">
       <img src="assets/images/Logo.png" alt="Luxriderez Logo"
-        class="w-48 md:w-64 mx-auto mb-6 drop-shadow-[0_0_15px_rgba(255,30,30,0.5)] transform hover:scale-105 transition-transform duration-500">
-
+        class="w-48 md:w-64 mx-auto mb-6 transform hover:scale-105 transition-transform duration-500">
       <h1 class="text-3xl md:text-6xl font-black uppercase tracking-tighter mb-4 leading-tight">
         ESTILO ÚNICO EN <span class="text-lux-neon">CADA RUTA</span>
       </h1>
-      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto font-light">
-        El morral viral en Bogotá. Tecnología LED, proteção rígida e espaço para tu casco.
+      <p class="text-xl text-zinc-400 mb-8 max-w-2xl mx-auto font-light">
+        El morral viral en Colômbia. Tecnología LED y protección rígida.
       </p>
+      <p class="text-xl text-zinc-400 mb-8 max-w-2xl mx-auto font-light">
+        Bienvenidos a luxriderez 💯 Moral / maletas led futurista👀, la más vendida del momento 🏍️ gente con estilo único en
+        cada ruta 😎</p>
       <a href="https://wa.me/573105891725"
-        class="inline-block w-full sm:w-auto bg-lux-neon hover:bg-lux-fire text-white font-bold py-4 px-6 md:px-10 rounded-full text-sm md:text-lg transition-all shadow-neon whitespace-nowrap">
+        class="inline-block w-full sm:w-auto bg-lux-neon hover:bg-lux-fire text-white font-bold py-4 px-10 rounded-full shadow-neon">
         Pedir Ahora (Bogotá)
       </a>
     </div>
   </section>
 
-  <section class="py-24 px-6 max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-widest text-zinc-500">Modelos Disponibles</h2>
+  <app-product-list></app-product-list>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div *ngFor="let p of products"
-        class="group bg-zinc-900 border border-zinc-800 rounded-3xl p-6 transition-all hover:border-lux-neon hover:shadow-neon-strong">
+  <app-product-detail></app-product-detail>
 
-        <div class="relative mb-6 overflow-hidden rounded-2xl h-64">
-          <img [src]="p.image" [alt]="p.name"
-            class="w-full h-full object-cover transition-transform group-hover:scale-110">
-
-          <div *ngIf="p.isCustom"
-            class="absolute top-3 right-3 bg-lux-neon text-[10px] font-bold px-3 py-1 rounded-full uppercase">
-            Personalizado
-          </div>
-        </div>
-
-        <h3 class="text-2xl font-bold mb-1 text-white">{{p.name}}</h3>
-        <p class="text-lux-neon text-sm font-bold mb-4 uppercase tracking-tighter">{{p.subtitle}}</p>
-
-        <p class="text-zinc-500 text-xs leading-relaxed mb-6 italic">
-          {{p.description}}
-        </p>
-
-        <p class="text-3xl font-black mb-6 text-lux-gold">
-          ${{p.price | number:'1.0-0'}} <span class="text-sm font-normal text-gray-500">COP</span>
-        </p>
-
-        <button (click)="openDetails(p)"
-          class="w-full py-3 border border-white/10 rounded-xl font-bold hover:bg-lux-neon hover:text-white transition-all uppercase text-xs tracking-widest">
-          Ver Detalles
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <app-technical-specs></app-technical-specs>
-
-  <div *ngIf="selectedProduct"
-    class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm">
-
-    <div class="bg-zinc-900 border-2 border-lux-neon w-full max-w-2xl rounded-3xl overflow-hidden shadow-neon-strong">
-      <div class="p-8 relative">
-        <button (click)="closeDetails()"
-          class="absolute top-4 right-6 text-white text-2xl hover:text-lux-neon transition-colors">&times;</button>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <img [src]="selectedProduct.image"
-            class="w-full rounded-2xl border border-zinc-800 object-cover h-full max-h-80">
-
-          <div class="flex flex-col">
-            <h2 class="text-3xl font-black text-white mb-2">{{selectedProduct.name}}</h2>
-            <p class="text-lux-neon font-bold mb-4 uppercase text-xs tracking-widest">{{selectedProduct.subtitle}}</p>
-
-            <p class="text-3xl font-black text-lux-gold mb-6">
-              ${{selectedProduct.price | number:'1.0-0'}} COP
-            </p>
-
-            <div class="mb-8">
-              <a href="https://wa.me/573105891725" target="_blank"
-                class="inline-block w-full bg-lux-neon hover:bg-lux-fire text-white font-black py-4 rounded-xl text-center transition-all shadow-neon uppercase tracking-widest transform hover:scale-105 active:scale-95">
-                Comprar Ahora
-              </a>
-            </div>
-
-            <div class="flex border-b border-zinc-800 mb-6 gap-6">
-              <button (click)="activeTab = 'specs'" [class.border-lux-neon]="activeTab === 'specs'"
-                class="pb-2 text-[10px] uppercase font-black tracking-widest border-b-2 transition-all"
-                [class.text-white]="activeTab === 'specs'" [class.text-zinc-600]="activeTab !== 'specs'">
-                Especificaciones
-              </button>
-              <button (click)="activeTab = 'trust'" [class.border-lux-neon]="activeTab === 'trust'"
-                class="pb-2 text-[10px] uppercase font-black tracking-widest border-b-2 transition-all"
-                [class.text-white]="activeTab === 'trust'" [class.text-zinc-600]="activeTab !== 'trust'">
-                Confianza
-              </button>
-              <button (click)="activeTab = 'details'" [class.border-lux-neon]="activeTab === 'details'"
-                class="pb-2 text-[10px] uppercase font-black tracking-widest border-b-2 transition-all"
-                [class.text-white]="activeTab === 'details'" [class.text-zinc-600]="activeTab !== 'details'">
-                Materiales
-              </button>
-            </div>
-
-            <div class="min-h-[150px]">
-              <div *ngIf="activeTab === 'specs'" class="animate-in fade-in duration-300">
-                <ul class="space-y-2">
-                  <li *ngFor="let feat of selectedProduct?.features"
-                    class="text-xs text-zinc-400 flex items-center gap-2">
-                    <span class="w-1 h-1 bg-lux-neon rounded-full"></span> {{feat}}
-                  </li>
-                  <li class="text-xs text-zinc-400 flex items-center gap-2">
-                    <span class="w-1 h-1 bg-lux-neon rounded-full"></span> Tamaño Grande: 48.26 cm (19")
-                  </li>
-                </ul>
-              </div>
-
-              <div *ngIf="activeTab === 'trust'" class="space-y-4 animate-in fade-in duration-300">
-                <h4 class="text-white text-xs font-bold flex items-center gap-2">🛡️ Seguridad en las compras</h4>
-                <div class="grid grid-cols-2 gap-3 text-[9px] text-zinc-500 uppercase font-bold">
-                  <div class="p-2 bg-zinc-950 rounded-lg border border-zinc-900">🔒 Pago Seguro</div>
-                  <div class="p-2 bg-zinc-950 rounded-lg border border-zinc-900">📦 Logística Segura</div>
-                </div>
-              </div>
-
-              <div *ngIf="activeTab === 'details'"
-                class="text-[11px] text-zinc-400 space-y-2 animate-in fade-in duration-300">
-                <p><strong>Carcasa:</strong> ABS Resina (Dura)</p>
-                <p><strong>Seguridad:</strong> Tiras Luminous</p>
-                <p class="text-lux-neon font-bold mt-4 italic">Bluetooth DIY: Control total desde móvil</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </main>
 
 <app-footer></app-footer>

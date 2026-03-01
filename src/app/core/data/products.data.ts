@@ -5,37 +5,53 @@ export const LUX_PRODUCTS: Product[] = [
         id: 'knight',
         name: 'Knight LED',
         subtitle: 'Diseño Armadura Futurista',
+        category: 'mochilas',
         price: 330000,
-        image: 'assets/knight.png',
+        images: ['assets/images/knight.png'],
         description: 'El modelo más vendido para protección rígida.',
-        features: ['ABS + Policarbonato', 'Espacio Casco Completo', 'App LOY EYES']
+        features: ['ABS + Policarbonato', 'Espacio Casco Completo', 'App LOY EYES'],
+        isCustom: false
     },
     {
         id: 'skull',
         name: 'Skull LED',
         subtitle: 'Edición Street Rebel',
+        category: 'mochilas',
         price: 380000,
-        image: 'assets/skull.png',
+        images: ['assets/images/skull.png'],
         isCustom: true,
-        description: 'Iluminación dinámica con diseño exclusivo de calavera.',
+        description: 'Iluminación dinâmica con diseño exclusivo de calavera.',
         features: ['DIY Text/Graphics', 'Impermeable', 'Diseño Agresivo']
     },
     {
         id: 'wolf',
         name: 'Wolf LED',
-        subtitle: 'Edición Marrón',
+        subtitle: 'Ojo de Demonio',
+        category: 'mochilas',
         price: 350000,
-        image: 'assets/images/wolf1.jpeg',
-        description: 'Mochila LED para Motocicleta con Ojo de Demonio, Bolsa para Casco de Motocicleta, Estilos de Cabeza de Lobo y Tigre, Luces RGB con Patrón de Ojo Programable y Control Bluetooth Móvil DIY, Bolsa para Laptop, Tamaño Grande 48.26 cm.',
-        features: ['Ojo de Demonio RGB', 'Control Bluetooth DIY', 'Carcasa ABS Rígida', 'Espacio para Laptop']
+        images: [
+            'assets/images/wolf1.jpeg',
+            'assets/images/wolf2.jpeg',
+            'assets/images/wolf3.jpeg',
+            'assets/images/wolf4.jpeg',
+            'assets/images/wolf5.jpeg',
+            'assets/images/wolf6.jpeg'
+        ],
+        video: 'assets/videos/wolfvideo.mp4',
+        description: 'Mochila LED para Motocicleta con Ojo de Demonio. Estilos de Cabeza de Lobo y Tigre.',
+        features: ['Ojo de Demonio RGB', 'Control Bluetooth DIY', 'Carcasa ABS Rígida'],
+        isCustom: false
     },
     {
-        id: 'lion',
-        name: 'Lion LED',
-        subtitle: 'Edición Marrón',
-        price: 350000,
-        image: 'assets/lion.png',
-        description: 'Diseño exclusivo de león marrón para motociclistas que buscan estilo y protección.',
-        features: ['ABS + Policarbonato', 'Espacio Casco Completo', 'App LOY EYES']
-    },
+        id: 'gorra-led',
+        name: 'Gorra LED Smart',
+        subtitle: 'Edición Bluetooth DIY',
+        category: 'gorras',
+        price: 150000,
+        images: ['assets/images/gorra1.jpeg', 'assets/images/gorra2.jpeg', 'assets/images/gorra3.jpeg'],
+        video: 'assets/videos/gorravideo.mp4',
+        description: 'Gorra LED con Pantalla, Control por Bluetooth e APP.',
+        features: ['Control total vía APP Bluetooth', 'Pantalla LED de alto brilho'],
+        isCustom: false
+    }
 ];

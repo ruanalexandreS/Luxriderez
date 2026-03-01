@@ -1,0 +1,37 @@
+<div *ngIf="product"
+    class="fixed inset-0 z-[100] flex justify-center p-4 md:items-center bg-black/90 backdrop-blur-sm overflow-y-auto">
+    <div
+        class="bg-zinc-900 border-2 border-lux-neon w-full max-w-4xl rounded-3xl shadow-neon-strong my-8 md:my-0 flex flex-col h-auto max-h-[90vh]">
+
+        <div
+            class="flex items-center justify-between p-4 md:p-6 border-b border-zinc-800 sticky top-0 bg-zinc-900 z-20 rounded-t-3xl">
+            <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                <span class="text-lux-neon">►</span> Detalles de {{product.name}}
+            </h2>
+            <button (click)="onClose()"
+                class="text-white text-4xl hover:text-lux-neon transition-colors">&times;</button>
+        </div>
+
+        <div class="p-6 md:p-10 overflow-y-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="relative group h-full min-h-[300px] md:min-h-[450px]">
+                    <video *ngIf="currentIndex === 0 && product.video" [src]="product.video" controls autoplay muted
+                        loop class="w-full h-full rounded-2xl object-cover"></video>
+                    <img *ngIf="!(currentIndex === 0 && product.video)"
+                        [src]="product.video ? product.images[currentIndex - 1] : product.images[currentIndex]"
+                        class="w-full h-full rounded-2xl object-cover">
+                </div>
+
+                <div class="flex flex-col">
+                    <p class="text-4xl font-black text-lux-gold mb-6 italic">${{product.price | number:'1.0-0'}} COP</p>
+                    <a href="https://wa.me/573105891725" target="_blank"
+                        class="bg-lux-neon py-5 rounded-2xl text-center font-black uppercase shadow-neon-strong">Comprar
+                        Ahora</a>
+
+                    <div class="mt-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

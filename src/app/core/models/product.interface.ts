@@ -1,10 +1,12 @@
 export interface Product {
-id: string;
-name: string;
-subtitle: string;
-price: number;
-image: string;
-description: string;
-features: string[];
-isCustom?: boolean;
+    id: string;
+    name: string;
+    subtitle: string;
+    description: string;
+    price: number;
+    images: string[];
+    category: 'mochilas' | 'gorras';
+    features: string[];
+    video?: string;
+    isCustom: boolean;
 }

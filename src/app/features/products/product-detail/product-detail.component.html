@@ -29,6 +29,24 @@
 
                     <p class="text-4xl font-black text-lux-gold mb-8 italic">${{product.price | number:'1.0-0'}} COP</p>
 
+                    <div *ngIf="product.options"
+                        class="space-y-6 mb-8 p-4 border border-zinc-800 rounded-2xl bg-black/20">
+                        <div *ngFor="let option of product.options">
+                            <h4 class="text-[10px] uppercase font-bold text-zinc-500 mb-3 tracking-[0.2em]">
+                                Selecciona {{option.label}}:
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <button *ngFor="let val of option.values" (click)="selectOption(option.label, val)"
+                                    [class.bg-lux-neon]="selectedOptions[option.label] === val"
+                                    [class.text-white]="selectedOptions[option.label] === val"
+                                    [class.border-lux-neon]="selectedOptions[option.label] === val"
+                                    class="px-5 py-2 border border-zinc-800 rounded-xl text-xs font-black transition-all hover:border-lux-neon hover:shadow-neon-sm uppercase tracking-tight">
+                                    {{val}}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                     <a [href]="getWhatsAppLink()" target="_blank"
                         class="bg-lux-neon py-5 rounded-2xl text-center font-black uppercase shadow-neon-strong hover:bg-lux-fire transition-all transform hover:scale-105 mb-8">
                         Comprar Ahora
@@ -38,8 +56,9 @@
                         <div class="grid grid-cols-2 gap-y-2 gap-x-4">
                             <div *ngFor="let spec of product.specifications"
                                 class="flex flex-col border-b border-zinc-900/50 pb-1">
-                                <span
-                                    class="text-[9px] uppercase tracking-tighter text-zinc-600 font-bold">{{spec.label}}</span>
+                                <span class="text-[9px] uppercase tracking-tighter text-zinc-600 font-bold">
+                                    {{spec.label}}
+                                </span>
                                 <span class="text-[10px] text-zinc-300 font-medium">{{spec.value}}</span>
                             </div>
                         </div>

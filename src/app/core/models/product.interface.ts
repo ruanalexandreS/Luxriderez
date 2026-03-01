@@ -7,9 +7,10 @@ export interface Product {
     originalPrice?: number;
     discountPercentage?: number;
     images: string[];
-    category: 'mochilas' | 'gorras';
+    category: 'mochilas' | 'gorras' | 'otros';
     features: string[];
     specifications?: { label: string; value: string }[];
+    options?: { label: string; values: string[] }[];
     video?: string;
     isCustom: boolean;
 }

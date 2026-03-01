@@ -16,6 +16,10 @@
             class="px-8 py-2 rounded-full border border-zinc-800 text-xs font-bold uppercase tracking-widest transition-all hover:border-lux-neon">
             Gorras
         </button>
+        <button (click)="setCategory('otros')" [class.bg-lux-neon]="selectedCategory === 'otros'"
+            class="px-8 py-2 rounded-full border border-zinc-800 uppercase text-xs font-bold transition-all">
+            Otros
+        </button>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

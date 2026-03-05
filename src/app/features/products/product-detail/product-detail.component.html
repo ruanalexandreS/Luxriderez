@@ -30,9 +30,9 @@
                     <p class="text-4xl font-black text-lux-gold mb-8 italic">${{product.price | number:'1.0-0'}} COP</p>
 
                     <div *ngIf="product.options"
-                        class="space-y-6 mb-8 p-4 border border-zinc-800 rounded-2xl bg-black/20">
+                        class="space-y-6 mb-8 p-4 border border-white/10 rounded-2xl bg-black/20">
                         <div *ngFor="let option of product.options">
-                            <h4 class="text-[10px] uppercase font-bold text-zinc-500 mb-3 tracking-[0.2em]">
+                            <h4 class="text-[10px] uppercase font-bold text-white/50 mb-3 tracking-[0.2em]">
                                 Selecciona {{option.label}}:
                             </h4>
                             <div class="flex flex-wrap gap-2">
@@ -40,7 +40,7 @@
                                     [class.bg-lux-neon]="selectedOptions[option.label] === val"
                                     [class.text-white]="selectedOptions[option.label] === val"
                                     [class.border-lux-neon]="selectedOptions[option.label] === val"
-                                    class="px-5 py-2 border border-zinc-800 rounded-xl text-xs font-black transition-all hover:border-lux-neon hover:shadow-neon-sm uppercase tracking-tight">
+                                    class="px-5 py-2 border border-white/10 rounded-xl text-xs font-black transition-all hover:border-lux-neon hover:shadow-neon-sm uppercase tracking-tight text-white">
                                     {{val}}
                                 </button>
                             </div>
@@ -52,14 +52,16 @@
                         Comprar Ahora
                     </a>
 
-                    <div *ngIf="product.specifications" class="p-4 border border-zinc-800 rounded-xl bg-black/40">
+                    <div *ngIf="product.specifications" class="p-4 border border-white/10 rounded-xl bg-black/40">
                         <div class="grid grid-cols-2 gap-y-2 gap-x-4">
                             <div *ngFor="let spec of product.specifications"
-                                class="flex flex-col border-b border-zinc-900/50 pb-1">
-                                <span class="text-[9px] uppercase tracking-tighter text-zinc-600 font-bold">
+                                class="flex flex-col border-b border-white/5 pb-1">
+                                <span class="text-[9px] uppercase tracking-tighter text-white/50 font-bold">
                                     {{spec.label}}
                                 </span>
-                                <span class="text-[10px] text-zinc-300 font-medium">{{spec.value}}</span>
+                                <span class="text-[10px] text-white font-medium">
+                                    {{spec.value}}
+                                </span>
                             </div>
                         </div>
                     </div>

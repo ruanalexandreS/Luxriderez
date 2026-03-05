@@ -20,13 +20,13 @@
         </span>
     </div>
 
-    <p class="text-zinc-500 text-xs leading-relaxed mb-6 italic">
+    <p class="text-white/80 text-xs leading-relaxed mb-6 italic">
         {{product.description}}
     </p>
 
     <div class="mt-auto">
         <div class="flex flex-col gap-1 mb-6">
-            <p *ngIf="product.originalPrice" class="text-xs text-zinc-500 uppercase font-bold tracking-wider">
+            <p *ngIf="product.originalPrice" class="text-xs text-white uppercase font-bold tracking-wider">
                 Antes: <span class="line-through decoration-red-600/50">${{product.originalPrice |
                     number:'1.0-0'}}</span>
             </p>

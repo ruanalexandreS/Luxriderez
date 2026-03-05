@@ -15,26 +15,16 @@ export class ProductListComponent implements OnInit {
   private allProducts: Product[] = LUX_PRODUCTS;
 
   filteredProducts: Product[] = [];
-  selectedCategory: string = 'todos';
 
   ngOnInit(): void {
-    this.setCategory('todos');
-  }
-
-
-  setCategory(category: string): void {
-    this.selectedCategory = category;
-
-    let result = category === 'todos'
-      ? [...this.allProducts]
-      : this.allProducts.filter(p => p.category === category);
-
-    this.filteredProducts = result.sort((a, b) => {
-      return a.id.localeCompare(b.id, undefined, {
-        numeric: true,
-        sensitivity: 'base'
+    this.filteredProducts = this.allProducts
+      .filter(p => p.category === 'mochilas')
+      .sort((a, b) => {
+        return a.id.localeCompare(b.id, undefined, {
+          numeric: true,
+          sensitivity: 'base'
+        });
       });
-    });
   }
 
   trackByProductId(index: number, product: Product): string {

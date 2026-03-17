@@ -60,7 +60,7 @@ export const LUX_PRODUCTS: Product[] = [
     name: 'Knight LED',
     subtitle: 'Edición Fibra de Carbono',
     category: 'mochilas',
-    price: 335000,
+    price: 350000,
     originalPrice: 480000,
     images: [
       'assets/images/knight1.jpeg', 'assets/images/knight2.jpeg',

@@ -1,37 +1,7 @@
 import { Product } from '../models/product.interface';
 
 export const LUX_PRODUCTS: Product[] = [
-{
-    id: '00-futurista', 
-    name: 'Futurista Pro',
-    subtitle: 'Edición Inteligente DIY',
-    category: 'mochilas',
-    price: 350000,
-    originalPrice: 550000,
-    images: [
-      'assets/images/futurista1.png',
-      'assets/images/futurista2.png',
-      'assets/images/futurista3.png'
-    ],
-    video: 'assets/videos/futuristavideo.mp4',
-    description: 'Morral o maleta led ojos futuristas semi impermeable de alta gama. La máxima expresión de tecnología en la ruta, permitiendo personalizar tus ojos digitales con GIFs, fotos y textos en tiempo real.',
-    features: [
-      'Pantalla DIY (Texto/GIF/Imágenes)',
-      'Material Semi-Impermeable Pro',
-      'Carcasa Rígida de Alta Resistencia',
-      'Control Total vía Bluetooth'
-    ],
-    specifications: [
-        { label: 'Material principal', value: 'ABS + Tela Impermeable' },
-        { label: 'Marca', value: 'CRELANDER' },
-        { label: 'Instrucciones de cuidado', value: 'Limpieza con paño seco' },
-        { label: 'Capacidad', value: 'Portátil de hasta 15.6"' },
-        { label: 'Alimentación', value: 'Power Bank USB (no incluido)' },
-        { label: 'Tipo de pantalla', value: 'Full Color Digital' }
-    ],
-    isCustom: false
-},  
-    {
+  {
     id: '01-black',
     name: 'Black LED',
     subtitle: 'Edición Futurista Pro',
@@ -47,11 +17,13 @@ export const LUX_PRODUCTS: Product[] = [
     description: 'Mochila de moto con LED, con carcasa rígida y pantalla digital programable, ideal para ciclismo al aire libre y almacenamiento de casco de ciclismo.',
     features: ['Pantalla LED interactiva', 'Diseño aerodinámico', 'Impacto nocturno'],
     specifications: [
-      { label: 'Material principal', value: 'ABS (resina ABS)' },
-      { label: 'Marca', value: 'CRELANDER' },
+      { label: 'Tipo de carcasa', value: 'Concha dura' },
+      { label: 'Material', value: 'ABS (resina ABS)' },
+      { label: 'Tipo de cierre', value: 'Cremallera impermeable' },
       { label: 'Instrucciones de cuidado', value: 'Limpieza con paño' },
-      { label: 'Tipo', value: 'Ver detalles del producto' },
-      { label: 'Color', value: 'Negro' }
+      { label: 'Compatibilidad', value: 'App Android / iOS' },
+      { label: 'Uso ideal', value: 'Viajes largos y ciudad' },
+      { label: 'Otros', value: 'no incluye power bank' }
     ],
     isCustom: false
   },
@@ -72,10 +44,13 @@ export const LUX_PRODUCTS: Product[] = [
     description: 'Mochila LED para Motocicleta con Almacenamiento para Casco - Carcasa Dura Ideal para Conducir de Noche, Diseño Deslumbrante y Patrón a Rayas.',
     features: ['ABS + Policarbonato', 'Espacio Casco Completo', 'App LOY EYES'],
     specifications: [
-      { label: 'Material principal', value: 'EVA' },
+      { label: 'Tipo de carcasa', value: 'Concha dura' },
+      { label: 'Material', value: 'ABS (resina ABS)' },
+      { label: 'Tipo de cierre', value: 'Cremallera impermeable' },
       { label: 'Instrucciones de cuidado', value: 'Limpieza con paño' },
-      { label: 'Tipo', value: 'Ver detalles del producto' },
-      { label: 'Color', value: 'Negro' }
+      { label: 'Compatibilidad', value: 'App Android / iOS' },
+      { label: 'Uso ideal', value: 'Viajes largos y ciudad' },
+      { label: 'Otros', value: 'no incluye power bank' }
     ],
     isCustom: false
   },
@@ -98,13 +73,44 @@ export const LUX_PRODUCTS: Product[] = [
     features: ['Capacidad Expandible', 'Espacio para Casco Completo', 'Carcasa Rígida de ABS'],
     options: [{ label: 'Color', values: ['Negro', 'Gris'] }],
     specifications: [
-      { label: 'Material principal', value: 'ABS (resina ABS)' },
-      { label: 'Color', value: 'Negro, Gris' }
+      { label: 'Tipo de carcasa', value: 'Concha dura' },
+      { label: 'Material', value: 'ABS (resina ABS)' },
+      { label: 'Tipo de cierre', value: 'Cremallera impermeable' },
+      { label: 'Instrucciones de cuidado', value: 'Limpieza con paño' },
+      { label: 'Compatibilidad', value: 'App Android / iOS' },
+      { label: 'Uso ideal', value: 'Viajes largos y ciudad' },
+      { label: 'Otros', value: 'no incluye power bank' }
     ],
     isCustom: false
   },
   {
-    id: '04-skull',
+    id: '04-cyborg',
+    name: 'Cyborg Pro',
+    subtitle: 'Edición Armadura Expandible',
+    category: 'mochilas',
+    price: 350000,
+    originalPrice: 550000,
+    images: [
+      'assets/images/cyborg1.png', 'assets/images/cyborg2.png', 'assets/images/cyborg3.png',
+      'assets/images/cyborg4.png', 'assets/images/cyborg5.png', 'assets/images/cyborg6.png',
+      'assets/images/cyborg7.png', 'assets/images/cyborg8.png', 'assets/images/cyborg9.png'
+    ],
+    video: 'assets/videos/cyborgvideo.mp4',
+    description: 'Mochila blindada con carcasa rígida de alta resistencia y diseño ergonómico. Expandible para casco completo. Pantalla LED DIY personalizable vía Bluetooth.',
+    features: ['Diseño Armadura', 'Espacio Capacete Expandible', 'Pantalla DIY Bluetooth'],
+    specifications: [
+      { label: 'Tipo de carcasa', value: 'Concha dura' },
+      { label: 'Material', value: 'ABS (resina ABS)' },
+      { label: 'Tipo de cierre', value: 'Cremallera impermeable' },
+      { label: 'Instrucciones de cuidado', value: 'Limpieza con paño' },
+      { label: 'Compatibilidad', value: 'App Android / iOS' },
+      { label: 'Uso ideal', value: 'Viajes largos y ciudad' },
+      { label: 'Otros', value: 'no incluye power bank' }
+    ],
+    isCustom: false
+  },
+  {
+    id: '05-skull',
     name: 'Skull LED',
     subtitle: 'Edición Street Rebel',
     category: 'mochilas',
@@ -119,15 +125,18 @@ export const LUX_PRODUCTS: Product[] = [
     description: 'Mochila LED de Calavera para Motocicleta, Mochila Rígida para Montar, Bolso para Laptop de Motocicleta DIY de Alta Calidad.',
     features: ['DIY Text/Graphics', 'Impermeable', 'Diseño Agresivo'],
     specifications: [
-      { label: 'Marca', value: 'GELROVA' },
-      { label: 'Modo de alimentación', value: 'USB' },
-      { label: 'Tipo de impresión', value: 'Sin estampado' },
-      { label: 'Pila recargable', value: 'No' }
+      { label: 'Tipo de carcasa', value: 'Concha dura' },
+      { label: 'Material', value: 'ABS (resina ABS)' },
+      { label: 'Tipo de cierre', value: 'Cremallera impermeable' },
+      { label: 'Instrucciones de cuidado', value: 'Limpieza con paño' },
+      { label: 'Compatibilidad', value: 'App Android / iOS' },
+      { label: 'Uso ideal', value: 'Viajes largos y ciudad' },
+      { label: 'Otros', value: 'no incluye power bank' }
     ],
     isCustom: true
   },
   {
-    id: '05-wolf',
+    id: '06-wolf',
     name: 'Wolf LED',
     subtitle: 'Edición especial Lobo',
     category: 'mochilas',
@@ -136,20 +145,24 @@ export const LUX_PRODUCTS: Product[] = [
     images: [
       'assets/images/wolf1.jpeg', 'assets/images/wolf2.jpeg',
       'assets/images/wolf3.jpeg', 'assets/images/wolf4.jpeg',
-      'assets/images/wolf5.jpeg'
+      'assets/images/wolf5.jpeg', 'assets/images/wolf6.jpeg'
     ],
     video: 'assets/videos/wolfvideo.mp4',
     description: 'Mochila LED para Motocicleta con Ojo de Demonio, Estilos de Cabeza de Lobo, Luces RGB con Patrón de Ojo Programable.',
     features: ['Ojo de Demonio RGB', 'Control Bluetooth DIY', 'Carcasa ABS Rígida'],
     specifications: [
-      { label: 'Material principal', value: 'ABS (resina ABS)' },
-      { label: 'Color', value: 'Negro' },
-      { label: 'Tipo de cierre', value: 'Cremallera' }
+      { label: 'Tipo de carcasa', value: 'Concha dura' },
+      { label: 'Material', value: 'ABS (resina ABS)' },
+      { label: 'Tipo de cierre', value: 'Cremallera impermeable' },
+      { label: 'Instrucciones de cuidado', value: 'Limpieza con paño' },
+      { label: 'Compatibilidad', value: 'App Android / iOS' },
+      { label: 'Uso ideal', value: 'Viajes largos y ciudad' },
+      { label: 'Otros', value: 'no incluye power bank' }
     ],
     isCustom: false
   },
   {
-    id: '06-tigre',
+    id: '07-tigre',
     name: 'Tiger LED',
     subtitle: 'Edición Tigre LED',
     category: 'mochilas',
@@ -165,14 +178,18 @@ export const LUX_PRODUCTS: Product[] = [
     description: 'Mochila de conducción con capa dura e olhos LED vermelhos e brancos. Design elegante com construção durável em PVC.',
     features: ['Ojos LED Rojos y Blancos', 'Carga USB Integrada', 'Capacidad 19"'],
     specifications: [
-      { label: 'Material', value: 'PVC' },
-      { label: 'Marca', value: 'GELROVA' },
-      { label: 'Modo de alimentación', value: 'USB' }
+      { label: 'Tipo de carcasa', value: 'Concha dura' },
+      { label: 'Material', value: 'ABS (resina ABS)' },
+      { label: 'Tipo de cierre', value: 'Cremallera impermeable' },
+      { label: 'Instrucciones de cuidado', value: 'Limpieza con paño' },
+      { label: 'Compatibilidad', value: 'App Android / iOS' },
+      { label: 'Uso ideal', value: 'Viajes largos y ciudad' },
+      { label: 'Otros', value: 'no incluye power bank' }
     ],
     isCustom: false
   },
   {
-    id: '07-lion',
+    id: '08-lion',
     name: 'Lion LED',
     subtitle: 'Edición Lion - Mirada Real',
     category: 'mochilas',
@@ -193,14 +210,46 @@ export const LUX_PRODUCTS: Product[] = [
       'Conexión Bluetooth vía App'
     ],
     specifications: [
-        { label: 'Material principal', value: 'ABS + EVA' },
-        { label: 'Color', value: 'Marrón / Negro' },
-        { label: 'Marca', value: 'GELROVA' },
-        { label: 'Instrucciones de cuidado', value: 'Limpieza con paño húmedo' },
-        { label: 'Compatibilidad', value: 'App Android / iOS' },
-        { label: 'Cierre', value: 'Cremallera Reforzada' },
-        { label: 'Uso ideal', value: 'Viajes largos y ciudad' }
+      { label: 'Tipo de carcasa', value: 'Concha dura' },
+      { label: 'Material', value: 'ABS (resina ABS)' },
+      { label: 'Tipo de cierre', value: 'Cremallera impermeable' },
+      { label: 'Instrucciones de cuidado', value: 'Limpieza con paño' },
+      { label: 'Compatibilidad', value: 'App Android / iOS' },
+      { label: 'Uso ideal', value: 'Viajes largos y ciudad' },
+      { label: 'Otros', value: 'no incluye power bank' }
     ],
     isCustom: false
-},
+  },
+  {
+    id: '09-powerbank',
+    name: 'Power Bank BYGP',
+    subtitle: 'Carga Ultrarrápida PD 18W / QC 3.0',
+    category: 'otros',
+    price: 30000,
+    originalPrice: 65000,
+    images: [
+      'assets/images/power1.png', 'assets/images/power2.jpeg',
+      'assets/images/power3.jpeg', 'assets/images/power4.jpeg',
+      'assets/images/power5.jpeg', 'assets/images/power6.jpeg',
+      'assets/images/power7.jpeg', 'assets/images/power8.jpeg',
+      'assets/images/power9.jpeg'
+    ],
+    video: 'assets/videos/powervideo.mp4',
+    description: 'Batería externa de carga ultrarrápida compatible con iPhone y Android. Pantalla LED de estado y diseño ultra resistente para exteriores.',
+    features: ['Carga rápida 22.5W', 'Pantalla LED', 'Puertos USB-A/C/Micro'],
+    options: [
+      { label: 'Color', values: ['Negro', 'Blanco'] },
+      { label: 'Capacidad', values: ['10000mAh'] }
+    ],
+    specifications: [
+      { label: 'Tipo de conector', value: 'USB tipo C' },
+      { label: 'Características de la batería', value: 'Batería recargable' },
+      { label: 'Modo de alimentación', value: 'Alimentado por batería/USB de doble uso' },
+      { label: 'Voltaje', value: '≤36 V' },
+      { label: 'Capacidad de la batería (mAh)', value: '10000' },
+      { label: 'Instrucciones de cuidado', value: 'Evitar humedad y altas temperaturas' },
+      { label: 'Uso ideal', value: 'Alimentación de maletas LED y móviles' }
+    ],
+    isCustom: false
+  },
 ];

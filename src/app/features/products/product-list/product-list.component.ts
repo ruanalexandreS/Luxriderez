@@ -17,8 +17,9 @@ export class ProductListComponent implements OnInit {
   filteredProducts: Product[] = [];
 
   ngOnInit(): void {
+    // Agora aceitamos 'mochilas' OU 'otros' no filtro
     this.filteredProducts = this.allProducts
-      .filter(p => p.category === 'mochilas')
+      .filter(p => p.category === 'mochilas' || p.category === 'otros')
       .sort((a, b) => {
         return a.id.localeCompare(b.id, undefined, {
           numeric: true,

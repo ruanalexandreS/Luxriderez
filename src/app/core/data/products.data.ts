@@ -60,7 +60,7 @@ export const LUX_PRODUCTS: Product[] = [
     name: 'Knight LED',
     subtitle: 'Edición Fibra de Carbono',
     category: 'mochilas',
-    price: 330000,
+    price: 335000,
     originalPrice: 480000,
     images: [
       'assets/images/knight1.jpeg', 'assets/images/knight2.jpeg',
@@ -84,7 +84,7 @@ export const LUX_PRODUCTS: Product[] = [
     name: 'Blade Knight',
     subtitle: 'Edición Blade Expandible',
     category: 'mochilas',
-    price: 380000,
+    price: 350000,
     originalPrice: 550000,
     images: [
       'assets/images/blade1.jpeg', 'assets/images/blade2.jpeg',
@@ -108,7 +108,7 @@ export const LUX_PRODUCTS: Product[] = [
     name: 'Skull LED',
     subtitle: 'Edición Street Rebel',
     category: 'mochilas',
-    price: 380000,
+    price: 350000,
     originalPrice: 550000,
     images: [
       'assets/images/skull1.jpeg', 'assets/images/skull2.jpeg',
@@ -131,7 +131,7 @@ export const LUX_PRODUCTS: Product[] = [
     name: 'Wolf LED',
     subtitle: 'Edición especial Lobo',
     category: 'mochilas',
-    price: 380000,
+    price: 350000,
     originalPrice: 550000,
     images: [
       'assets/images/wolf1.jpeg', 'assets/images/wolf2.jpeg',
@@ -153,7 +153,7 @@ export const LUX_PRODUCTS: Product[] = [
     name: 'Tiger LED',
     subtitle: 'Edición Tigre LED',
     category: 'mochilas',
-    price: 380000,
+    price: 350000,
     originalPrice: 550000,
     images: [
       'assets/images/tigre1.jpeg', 'assets/images/tigre2.jpeg',
@@ -176,7 +176,7 @@ export const LUX_PRODUCTS: Product[] = [
     name: 'Lion LED',
     subtitle: 'Edición Lion - Mirada Real',
     category: 'mochilas',
-    price: 380000,
+    price: 350000,
     originalPrice: 550000,
     images: [
       'assets/images/lion1.png',
